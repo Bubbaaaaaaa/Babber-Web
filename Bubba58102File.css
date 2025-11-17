@@ -1,9 +1,56 @@
-img {
-    width : 500px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ff1493;
+    font-family: Arial, sans-serif;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
     text-align: center;
-    font-family: 'arial';
-    background: rgba(192, 10, 10, 0.363);
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 350px;
+    height: 650px;
+    object-fit: cover;
+    border: 6px solid pink;
+    border-radius: 12px;
+    animation: pop 0.8s ease;
+}
+
+.extra {
+    margin-top: 25px;
+    font-size: 20px;
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
